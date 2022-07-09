@@ -2,7 +2,7 @@
 using namespace std;
 
 typedef long long LL;
-typedef vector<LL> VL; 
+typedef vector<LL> VL;
 typedef vector<string> VS;
 typedef vector<pair<LL, LL>> VP;
 typedef vector<VL> VV;
@@ -26,9 +26,9 @@ bool contains(C&& c, T t) {
     return std::find(std::begin(c), std::end(c), t) != std::end(c);
 };
 
-struct student{
+struct student {
     int matriculation_number;
-    string given_name,surname,email_address,course;
+    string given_name, surname, email_address, course;
     bool task[6];
 };
 
@@ -37,10 +37,10 @@ void output(student);
 
 int main()
 {
-   #ifndef ONLINE_JUDGE
-    freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
-    #endif
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
 
 
     student st;
@@ -50,12 +50,12 @@ int main()
 
 
 
-   
-    cerr<<"Time taken : "<<(float)clock()/CLOCKS_PER_SEC<<" secs"<<endl;
-    if(((float)clock()/CLOCKS_PER_SEC)>=1.0)
-        cerr<<"Need to optimize!!"<<endl;
+
+    cerr << "Time taken : " << (float)clock() / CLOCKS_PER_SEC << " secs" << endl;
+    if (((float)clock() / CLOCKS_PER_SEC) >= 1.0)
+        cerr << "Need to optimize!!" << endl;
     else
-        cerr<<"RuntimeOKAY!"<<endl;
+        cerr << "RuntimeOKAY!" << endl;
 
     return 0;
 }
@@ -67,19 +67,19 @@ void set_data(student &data) {
     data.email_address = "muntasir.ebna.helal@stud.uni-due.de";
     data.course = "B.Sc. ISE CE";
 
-    for (int i=0; i<=5; i++) {
+    for (int i = 0; i <= 5; i++) {
         data.task[i] = 0;
     }
 
 }
 
 void output(student data) {
-    cout<<"matr.no.: "<<data.matriculation_number<<endl;
-    cout<<"name: "<<data.given_name<<" "<<data.surname<<endl;
-    cout<<"email: "<<data.email_address<<endl;
-    cout<<"course of studies: "<<data.course<<endl;
-    cout<<boolalpha<<"tasks passed: ";
-    for (int i=0; i<=5; i++) {
-        cout<<i+1<<" "<<data.task[i]<<" ";
+    cout << "matr.no.: " << data.matriculation_number << endl;
+    cout << "name: " << data.given_name << " " << data.surname << endl;
+    cout << "email: " << data.email_address << endl;
+    cout << "course of studies: " << data.course << endl;
+    cout << boolalpha << "tasks passed: ";
+    for (int i = 0; i <= 5; i++) {
+        cout << i + 1 << " " << data.task[i] << " ";
     }
 }
