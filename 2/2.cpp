@@ -43,12 +43,22 @@ void output(Bus& b) {
 }
 
 struct Stop {
-    string Stop;
+    string Stop_name;
     int total_number_StoppedBus, total_number_pass_got_on, total_number_pass_got_off;
     // pointer
     // will add later
 }
 
+Stop* generate_stop(string name){
+    Stop* new_Stop = new Stop;
+    new_Stop->Stop_name = name;
+    new_Stop->total_number_StoppedBus = 0;
+    new_Stop->total_number_pass_got_on = 0;
+    new_Stop->total_number_pass_got_off = 0;
+    
+    new_Stop->next = NULL;
+    return new_Stop;
+}
 
 
 int main()
