@@ -64,7 +64,7 @@ void set_data(student &data) {
     data.matriculation_number = 3164924;
     data.given_name = "Muntasir Ebna";
     data.surname = "Helal";
-    data.email_address = "muntasir.ebna.helal@stud.uni-due.de";
+    data.email_address = "muntasir.helal@stud.uni-duisburg-essen.de";
     data.course = "B.Sc. ISE CE";
 
     for (int i = 0; i <= 5; i++) {
